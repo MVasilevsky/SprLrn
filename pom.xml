@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>by.mvas.sprgr</groupId>
-    <artifactId>example-spring-initializer</artifactId>
+    <artifactId>sprlrn</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Spring Learning Project</name>
