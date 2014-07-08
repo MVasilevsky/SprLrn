@@ -11,6 +11,8 @@ import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.util.Log4jConfigListener;
 
 /**
+ * Instead of web.xml
+ * 
  * @author Max
  */
 public class AppInitializer implements WebApplicationInitializer {

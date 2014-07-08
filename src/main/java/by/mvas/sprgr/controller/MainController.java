@@ -1,5 +1,6 @@
 package by.mvas.sprgr.controller;
 
+import by.mvas.sprgr.config.PropertyContainer;
 import by.mvas.sprgr.config.UserSession;
 import by.mvas.sprgr.preprocessing.SLLog;
 import org.apache.log4j.Logger;
@@ -18,11 +19,14 @@ public class MainController {
     
     @Autowired
     private UserSession session;
+    
+    @Autowired
+    private PropertyContainer container;
 
     @RequestMapping("/")
     public String main() {
         logger.info("request received");
-        return "Hello, Spring MVC! " + session.getDate().toString();
+        return "Hello, Spring MVC! <br> Session demo: " + session.getDate().toString() + "<br> Property demo: " + container.getProperty();
     }
 
 }
