@@ -16,7 +16,7 @@ import org.springframework.context.annotation.ScopedProxyMode;
  */
 @Configuration
 @ComponentScan(basePackages = "by.mvas.sprgr")
-@Import({PropertyConfig.class})
+@Import({PropertyConfig.class, I18nConfig.class})
 public class AppConfig {
 
     @Value("${property}")
