@@ -1,5 +1,6 @@
 package by.mvas.sprgr;
 
+import by.mvas.sprgr.Filter.RequestLoggerFilter;
 import by.mvas.sprgr.Filter.UTF8ResponseFilter;
 import org.springframework.web.WebApplicationInitializer;
 
@@ -8,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.util.Log4jConfigListener;
 
@@ -26,6 +28,9 @@ public class AppInitializer implements WebApplicationInitializer {
 
         // encoding filter
         servletContext.addFilter("utf8filter", UTF8ResponseFilter.class).addMappingForUrlPatterns(null, false, "/*");
+        
+        // logging filter (DelegatingFilterProxy used because filter needs to be a Spring component)
+        servletContext.addFilter("requestLoggerFilter", DelegatingFilterProxy.class).addMappingForUrlPatterns(null, false, "/*");
 
         // log4j config
         servletContext.addListener(Log4jConfigListener.class);
