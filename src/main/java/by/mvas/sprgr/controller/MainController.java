@@ -34,5 +34,5 @@ public class MainController {
                 + "<br> Property demo: " + container.getProperty()
                 + "<br> Message demo: " + messageSource.getMessage("mess", null, request.getLocale());
     }
-
+    
 }
