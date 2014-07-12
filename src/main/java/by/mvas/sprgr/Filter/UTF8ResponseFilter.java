@@ -14,10 +14,10 @@ import org.apache.log4j.Logger;
  *
  * @author mvas
  */
-public class UTF8ResponseFilter implements Filter{
+public class UTF8ResponseFilter implements Filter {
 
     Logger l = Logger.getLogger(UTF8ResponseFilter.class);
-    
+
     @Override
     public void init(FilterConfig fc) throws ServletException {
     }
@@ -31,5 +31,5 @@ public class UTF8ResponseFilter implements Filter{
     @Override
     public void destroy() {
     }
-    
+
 }

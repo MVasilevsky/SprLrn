@@ -16,8 +16,8 @@ import org.springframework.stereotype.Component;
  * @author mvas
  */
 @Component
-public class RequestLoggerFilter implements Filter{
-    
+public class RequestLoggerFilter implements Filter {
+
     @SLLog
     private Logger log;
 
@@ -34,5 +34,5 @@ public class RequestLoggerFilter implements Filter{
     @Override
     public void destroy() {
     }
-    
+
 }

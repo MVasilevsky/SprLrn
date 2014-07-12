@@ -28,7 +28,7 @@ public class AppInitializer implements WebApplicationInitializer {
 
         // encoding filter
         servletContext.addFilter("utf8filter", UTF8ResponseFilter.class).addMappingForUrlPatterns(null, false, "/*");
-        
+
         // logging filter (DelegatingFilterProxy used because filter needs to be a Spring component)
         servletContext.addFilter("requestLoggerFilter", DelegatingFilterProxy.class).addMappingForUrlPatterns(null, false, "/*");
 

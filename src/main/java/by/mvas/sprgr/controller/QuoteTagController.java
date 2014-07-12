@@ -13,21 +13,21 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/tag")
 public class QuoteTagController {
-    
+
     @RequestMapping("")
     public ModelAndView list() {
         return new ModelAndView(""); // TODO
     }
-    
+
     @RequestMapping(value = "add", method = RequestMethod.GET)
     public String add() {
         return "tag.add";
     }
-    
+
     @RequestMapping(value = "add", method = RequestMethod.POST)
     public String addDo(QuoteTag tag) {
         // ...
         return "tag.add";
     }
-    
+
 }

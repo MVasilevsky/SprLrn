@@ -5,7 +5,7 @@ package by.mvas.sprgr.config;
  * @author mvas
  */
 public class PropertyContainer {
-    
+
     private String property;
 
     public PropertyContainer() {
@@ -22,5 +22,5 @@ public class PropertyContainer {
     public void setProperty(String property) {
         this.property = property;
     }
-    
+
 }

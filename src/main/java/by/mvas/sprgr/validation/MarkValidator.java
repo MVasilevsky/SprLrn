@@ -7,7 +7,7 @@ import org.springframework.validation.Validator;
 
 /**
  * Quote mark validator.
- * 
+ *
  * User and date will be set later
  *
  * @author mvas

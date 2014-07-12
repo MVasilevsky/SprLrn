@@ -6,8 +6,8 @@ import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 /**
- * Quote tag validator
- * Checks only title, because other fields will be filled manually
+ * Quote tag validator Checks only title, because other fields will be filled
+ * manually
  *
  * @author mvas
  */

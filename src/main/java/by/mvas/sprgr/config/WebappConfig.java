@@ -3,7 +3,6 @@ package by.mvas.sprgr.config;
 import by.mvas.sprgr.model.Quote;
 import by.mvas.sprgr.model.QuoteTag;
 import by.mvas.sprgr.model.Role;
-import java.util.Arrays;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

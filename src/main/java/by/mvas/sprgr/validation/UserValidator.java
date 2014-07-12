@@ -9,7 +9,7 @@ import org.springframework.validation.Validator;
  *
  * @author mvas
  */
-public class UserValidator implements Validator{
+public class UserValidator implements Validator {
 
     @Override
     public boolean supports(Class<?> type) {
@@ -21,5 +21,5 @@ public class UserValidator implements Validator{
         ValidationUtils.rejectIfEmpty(errors, "login", "login.not.set");
         ValidationUtils.rejectIfEmpty(errors, "role", "role.not.set");
     }
-    
+
 }

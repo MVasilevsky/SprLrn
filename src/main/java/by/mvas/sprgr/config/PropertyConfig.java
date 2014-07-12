@@ -12,7 +12,8 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
  * @author mvas
  */
 @Configuration
-@PropertySources(value = {@PropertySource("classpath:/prop.properties")})
+@PropertySources(value = {
+    @PropertySource("classpath:/prop.properties")})
 public class PropertyConfig {
 
     @Bean

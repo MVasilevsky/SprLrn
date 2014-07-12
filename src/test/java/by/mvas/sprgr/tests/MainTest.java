@@ -10,10 +10,10 @@ import org.junit.runner.RunWith;
  * @author mvas
  */
 public class MainTest {
-    
+
     @Test
     public void test() {
         assertNotNull(new User());
     }
-    
+
 }

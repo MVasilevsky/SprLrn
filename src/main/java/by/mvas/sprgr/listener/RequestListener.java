@@ -5,8 +5,7 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.web.context.support.RequestHandledEvent;
 
 /**
- * WTF Exception with registered listener
- * java.lang.IllegalArgumentException:
+ * WTF Exception with registered listener java.lang.IllegalArgumentException:
  * Inappropriate listener type by.mvas.sprgr.listener.RequestListener
  *
  * @author mvas

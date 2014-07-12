@@ -19,7 +19,7 @@ public class ResourceController {
 
     @Autowired
     private ResourceLoader resourceLoader;
-    
+
     @RequestMapping("")
     public String page() {
         return "resourceDemo";

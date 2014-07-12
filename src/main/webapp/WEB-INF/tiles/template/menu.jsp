@@ -1,6 +1,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <div class="menu">
-Menu
+    Menu
     <ul>
         <li>
             <spring:url value="/home" var="homeUrl" htmlEscape="true"/>

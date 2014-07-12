@@ -38,9 +38,9 @@ public class QuoteController {
         List<QuoteTag> quoteTags1 = (List<QuoteTag>) conversionService.convert(quoteTags,
                 TypeDescriptor.collection(List.class, TypeDescriptor.valueOf(String.class)),
                 TypeDescriptor.collection(List.class, TypeDescriptor.valueOf(QuoteTag.class)));
-        
+
         quote.setTags(quoteTags1);
-        
+
         return "quote.add";
     }
 

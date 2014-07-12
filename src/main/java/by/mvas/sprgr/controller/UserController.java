@@ -16,17 +16,17 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-    
+
     @SLLog
     private Logger logger;
 
 //    @Secured
     @RequestMapping(value = "add", method = RequestMethod.GET)
     public ModelAndView userAdd() {
-        
+
         return new ModelAndView("useradd"/*, "roles", new String[] {"admin", "user", "read-only"}*/);
     }
-    
+
     @RequestMapping(value = "add", method = RequestMethod.POST)
     public String userAddDo(User user) {
         logger.info("User added: " + user.getLogin() + " (" + user.getRole().getCode() + ")");
