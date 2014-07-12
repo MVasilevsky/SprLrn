@@ -1,16 +1,40 @@
 package by.mvas.sprgr.model;
 
+import java.io.Serializable;
 import java.util.Set;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 
 /**
  * Contains list of permissions
  *
  * @author mvas
  */
-public class Role {
+@Entity
+@Table(name = "userrole")
+public class Role implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
+
+    @Column(name = "code")
     private String code;
+
+    @ManyToMany
+    @JoinTable(name = "role_permission",
+            joinColumns = {
+                @JoinColumn(name = "role_id", referencedColumnName = "id")},
+            inverseJoinColumns = {
+                @JoinColumn(name = "perm_id", referencedColumnName = "id")})
     private Set<Permission> permissions;
 
     public Role() {

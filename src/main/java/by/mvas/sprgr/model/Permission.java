@@ -1,23 +1,38 @@
 package by.mvas.sprgr.model;
 
+import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * Permission in system.
- * 
+ *
  * Role contains list of permissions.
  *
  * @author mvas
  */
-public class Permission {
+@Entity
+@Table(name = "permission")
+public class Permission implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
-    private String name;
+
+    @Column(name = "permTitle")
+    private String title;
 
     public Permission() {
     }
 
-    public Permission(int id, String name) {
+    public Permission(int id, String title) {
         this.id = id;
-        this.name = name;
+        this.title = title;
     }
 
     public int getId() {
@@ -28,12 +43,12 @@ public class Permission {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
 }

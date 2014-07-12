@@ -1,18 +1,44 @@
 package by.mvas.sprgr.model;
 
+import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
 
 /**
  * Quote mark
  *
  * @author mvas
  */
-public class Mark {
+@Entity
+@Table(name = "mark")
+public class Mark implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
+
+    @ManyToOne
+    @JoinColumn(name = "id")
     private Quote quote;
+
+    @Column(name = "points")
     private int points;
+
+    @ManyToOne
+    @JoinColumn(name = "id")
     private User user;
+
+    @Column(name = "creationDate")
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date creationDate;
 
     public Mark() {
