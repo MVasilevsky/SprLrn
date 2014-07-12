@@ -10,10 +10,19 @@ import java.util.List;
  */
 public class QuoteTag {
 
+    private int id;
     private String title;
     private User creator;
     private Date creationDate;
     private List<Quote> quotes;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;

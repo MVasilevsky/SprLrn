@@ -8,6 +8,7 @@ import java.util.Date;
  */
 public class User {
 
+    private int id;
     private String login;
     private Role role;
     private Date registrationDate;
@@ -15,10 +16,19 @@ public class User {
     public User() {
     }
 
-    public User(String login, Role role, Date registrationDate) {
+    public User(int id, String login, Role role, Date registrationDate) {
+        this.id = id;
         this.login = login;
         this.role = role;
         this.registrationDate = registrationDate;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getLogin() {

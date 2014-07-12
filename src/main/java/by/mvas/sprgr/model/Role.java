@@ -10,15 +10,15 @@ import java.util.Set;
 public class Role {
 
     private int id;
-    private String title;
+    private String code;
     private Set<Permission> permissions;
 
     public Role() {
     }
 
-    public Role(int id, String title, Set<Permission> permissions) {
+    public Role(int id, String code, Set<Permission> permissions) {
         this.id = id;
-        this.title = title;
+        this.code = code;
         this.permissions = permissions;
     }
 
@@ -30,12 +30,12 @@ public class Role {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getCode() {
+        return code;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public Set<Permission> getPermissions() {

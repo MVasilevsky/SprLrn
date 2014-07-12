@@ -9,6 +9,7 @@ import java.util.Date;
  */
 public class Mark {
 
+    private int id;
     private Quote quote;
     private int points;
     private User user;
@@ -17,11 +18,20 @@ public class Mark {
     public Mark() {
     }
 
-    public Mark(Quote quote, int points, User user, Date creationDate) {
+    public Mark(int id, Quote quote, int points, User user, Date creationDate) {
+        this.id = id;
         this.quote = quote;
         this.points = points;
         this.user = user;
         this.creationDate = creationDate;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Quote getQuote() {

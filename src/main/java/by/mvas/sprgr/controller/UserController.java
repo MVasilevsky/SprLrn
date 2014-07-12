@@ -29,7 +29,7 @@ public class UserController {
     
     @RequestMapping(value = "add", method = RequestMethod.POST)
     public String userAddDo(User user) {
-        logger.info("User added: " + user.getLogin() + " (" + user.getRole().getTitle() + ")");
+        logger.info("User added: " + user.getLogin() + " (" + user.getRole().getCode() + ")");
         return "useradd";
     }
 
