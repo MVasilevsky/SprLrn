@@ -27,14 +27,14 @@ public class Mark implements Serializable {
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "quote_id")
     private Quote quote;
 
     @Column(name = "points")
     private int points;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "user_id")
     private User user;
 
     @Column(name = "creationDate")

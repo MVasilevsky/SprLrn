@@ -21,7 +21,7 @@ import javax.persistence.Temporal;
  * @author mvas
  */
 @Entity
-@Table(name = "quoteTag")
+@Table(name = "quotetag")
 public class QuoteTag implements Serializable {
 
     @Id
@@ -33,7 +33,7 @@ public class QuoteTag implements Serializable {
     private String title;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "creator_id")
     private User creator;
 
     @Column(name = "creationDate")

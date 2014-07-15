@@ -12,13 +12,14 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class QuoteConverter implements Converter<String, Quote> {
-
-    @Autowired
-    private QuoteRepository quoteRepository;
+//
+//    @Autowired
+//    private QuoteRepository quoteRepository;
 
     @Override
     public Quote convert(String s) {
-        return quoteRepository.findById(Integer.valueOf(s));
+//        return quoteRepository.findById(Integer.valueOf(s));
+        return null;
     }
 
 }

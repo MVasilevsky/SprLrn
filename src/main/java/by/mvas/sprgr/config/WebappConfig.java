@@ -10,6 +10,7 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.format.Formatter;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
@@ -51,5 +52,12 @@ public class WebappConfig extends WebMvcConfigurerAdapter {
         registry.addConverter(quoteConverter);
         registry.addConverter(quoteTagConverter);
     }
+    
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry)
+    {
+        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+    }
+
 
 }

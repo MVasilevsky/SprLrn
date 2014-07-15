@@ -1,6 +1,8 @@
 package by.mvas.sprgr.model;
 
+import java.io.InputStream;
 import java.io.Serializable;
+import java.sql.Blob;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Column;
@@ -8,12 +10,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.PostLoad;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.Transient;
+import org.h2.jdbc.JdbcBlob;
+import org.hibernate.annotations.Type;
 
 /**
  * Цитата
@@ -36,7 +42,8 @@ public class Quote implements Serializable {
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date uploadingDate;
 
-    @ManyToMany(mappedBy = "quotes")
+    @ManyToOne
+    @JoinColumn(name = "uploader_id")
     private User uploader;
 
     @Transient
@@ -49,15 +56,6 @@ public class Quote implements Serializable {
     private List<Mark> marks;
 
     public Quote() {
-    }
-
-    public Quote(int id, byte[] picture, Date uploadingDate, User uploader, double rating, List<QuoteTag> tags) {
-        this.id = id;
-        this.picture = picture;
-        this.uploadingDate = uploadingDate;
-        this.uploader = uploader;
-        this.rating = rating;
-        this.tags = tags;
     }
 
     public int getId() {

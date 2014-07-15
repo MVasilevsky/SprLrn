@@ -15,8 +15,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class RoleFormatter extends BaseFormatter implements Formatter<Role> {
 
-    @Autowired
-    private RoleRepository roleRepository;
+//    @Autowired
+//    private RoleRepository roleRepository;
 
     @Override
     public String print(Role role, Locale locale) {
@@ -25,7 +25,8 @@ public class RoleFormatter extends BaseFormatter implements Formatter<Role> {
 
     @Override
     public Role parse(String string, Locale locale) throws ParseException {
-        return roleRepository.findById(Integer.valueOf(string));
+//        return roleRepository.findById(Integer.valueOf(string));
+        return null;
     }
 
 }

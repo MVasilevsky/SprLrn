@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 
@@ -30,9 +30,12 @@ public class User implements Serializable {
 
     @Column(name = "login")
     private String login;
+    
+    @Column(name = "password")
+    private String password;
 
-    @OneToOne
-    @JoinColumn(name = "id")
+    @ManyToOne
+    @JoinColumn(name = "role_id")
     private Role role;
 
     @Column(name = "regDate")
@@ -87,4 +90,11 @@ public class User implements Serializable {
         this.quotes = quotes;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

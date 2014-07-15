@@ -16,7 +16,7 @@ import javax.persistence.Table;
  * @author mvas
  */
 @Entity
-@Table(name = "permission")
+@Table(name = "userpermission")
 public class Permission implements Serializable {
 
     @Id
